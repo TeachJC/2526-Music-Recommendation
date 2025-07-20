@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Movie Recommendation </title>
+  <style>
+    body {
+      background-image: url(Spotify\ Background.jpg);
+      background-size: cover;
+      backdrop-filter: blur(5px);
+      margin: 40px;
+      font-family: 'Gill Sans', sans-serif;
+      
+    }
+
+    .form-container {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      width: 500px;
+      margin: auto;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea,
+    select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      box-sizing: border-box;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    .checkbox-group,
+    .radio-group {
+      margin-top: 5px;
+      display: inline-flex;
+    }
+
+    .checkbox-group label,
+    .radio-group label {
+      font-weight: normal;
+      margin-right: 10px;
+    }
+
+    button {
+      margin-top: 20px;
+      background-color: #007bff;
+      color: white;
+      padding: 12px;
+      width: 100%;
+      font-size: 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <h2> Music Recommendation </h2>
+    <form>
+      <!-- Input Fields -->
+      <label for="name">Your Name:</label>
+      <input type="text" id="name" name="name" placeholder="Jane Doe" required>
+
+      <label for="email">Your Email:</label>
+      <input type="email" id="email" name="email" placeholder="jane_doe@gmail.com" required>
+
+      <!-- Textarea -->
+      <label for="music">Recommended Music Title:</label>
+      <input type="text" id="music" name="music" required>
+
+      <label for="reason">Why do you recommend it?</label>
+      <textarea id="reason" name="reason" rows="4" placeholder="feedback here..." required></textarea>
+      <br>
+      <br>
+
+      <!-- Checkbox: Genres -->
+      <label>Genres (select all that apply):</label>
+      <div class="checkbox-group">
+        <input type="checkbox" id="pop" name="genre" value="Pop Music">
+        <label for="pop">Pop Music</label>
+
+        <input type="checkbox" id="Kpop" name="genre" value="Kpop">
+        <label for="Kpop">Kpop</label>
+
+        <input type="checkbox" id="Jazz" name="genre" value="Jazz">
+        <label for="Jazz">Jazz</label>
+
+        <input type="checkbox" id="Rock" name="genre" value="Rock">
+        <label for="Rock">Rock</label>
+
+        <input type="checkbox" id="Classical" name="genre" value="Classical">
+        <label for="Classical">Classical</label>
+      </div>
+
+    <br>
+    <br>
+
+      <!-- Radio: Music Rating -->
+      <label>Rate the Movie:</label>
+      <div class="radio-group">
+        <input type="radio" id="rate1" name="rating" value="1" required>
+        <label for="rate1">1</label>
+
+        <input type="radio" id="rate2" name="rating" value="2">
+        <label for="rate2">2</label>
+
+        <input type="radio" id="rate3" name="rating" value="3">
+        <label for="rate3">3</label>
+
+        <input type="radio" id="rate4" name="rating" value="4">
+        <label for="rate4">4</label>
+
+        <input type="radio" id="rate5" name="rating" value="5">
+        <label for="rate5">5 (Best)</label>
+      </div>
+
+    <br>
+    <br>
+
+      <!-- Select -->
+      <label for="platform">Where did you hear it?</label>
+      <select id="platform" name="platform" required>
+        <option value="">-- Select Platform --</option>
+        <option value="Netflix">Netflix</option>
+        <option value="Disney+">Disney+</option>
+        <option value="Youtube">Youtube</option>
+        <option value="Spotify">Spotify</option>
+        <option value="Other">Other</option>
+      </select>
+    
+    <br>
+    <br>
+
+      <!-- Submit -->
+      <button type="submit">Submit Recommendation</button>
+    </form>
+  </div>
+
+</body>
+</html>
